@@ -31,6 +31,7 @@ Total time (so far): 3 hours
 
 ### Issues encountered / Difficulties:
 - I needed a bit of time to get used to the differences between React and Preact. I had to look up some things, but it was not too difficult. They are very similar after all.
+- I forgot to put it all in GitHub from the get-go, so I tried recreating my workflow as best as I could (so the timestamps don't match up with the time spent above)
 
 ### What I focused on:
 - UX: I wanted to make sure that the command palette was easy to use and that the user would know what to do when they opened it.
