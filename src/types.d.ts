@@ -8,7 +8,7 @@ export interface ResultType {
     description?: string;
     owner?: string;
     createdAt?: Date;
-    fileNames?: string;
+    fileName?: string;
     fileType?: string;
     folder?: string;
     createdBy?: string;

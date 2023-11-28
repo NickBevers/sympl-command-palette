@@ -9,9 +9,11 @@
 	-webkit-text-size-adjust: 100%;
 
     --white: #ffffff;
-    --black: #000000;
-    --gray: #323232;
     --offWhite: #f3f3f3;
+    --lightGray: #eaeaea;
+    --gray: #323232;
+    --black: #000000;
+    --offBlack: #282c34;
 }
 
 .app {
