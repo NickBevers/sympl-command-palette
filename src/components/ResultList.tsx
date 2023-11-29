@@ -4,7 +4,8 @@ import { User, File, Folder } from 'lucide-preact';
 import { useEffect, useState } from 'preact/hooks';
 
 interface ResultListProps {
-    data: ResultType[];
+    data: ResultType[],
+    visible: boolean
 }
 
 const timeDifference = (current: Date = new Date(), previous: Date) => {
@@ -30,7 +31,7 @@ const timeDifference = (current: Date = new Date(), previous: Date) => {
     return answer;
 }
 
-const ResultList =  ({ data }: ResultListProps) => {
+const ResultList =  ({ data, visible }: ResultListProps) => {
     const [results, setResults] = useState<ResultType[]>([]);
     const [activeFilter, setActiveFilter] = useState<string>('all');
 
@@ -43,9 +44,9 @@ const ResultList =  ({ data }: ResultListProps) => {
         const filteredResults = data.filter((result) => result.type === type);
         setResults(filteredResults);
     }
-
+    
     return (
-        <div class={styles.resultList}>
+        <div class={`${styles.resultList} ${!visible ? styles.hidden :''}`}>
             <ul class={styles.resultList__header}>
                 <li class={`${styles.resultList__header__item} ${activeFilter === 'all' ? styles.active : ''}`} onClick={() => {setActiveFilter('all'); setResults(data)}}>All results <span class={styles.amount}>{data.length || 0}</span></li>
                 <li class={`${styles.resultList__header__item} ${activeFilter === 'user' ? styles.active : ''}`} onClick={() => {filterResults('user')}}>Team <span class={styles.amount}>{data.filter((result) => result.type === 'user').length || 0}</span></li> 

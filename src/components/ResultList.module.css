@@ -9,7 +9,9 @@
     background-color: var(--offWhite);
     border-radius: 10px;
     min-height: 500px;
+    height: min(70%, 500px);
     color: var(--gray);
+    transition: visibility 0.5s ease-in-out;
 }
 
 .resultList__header{
@@ -150,10 +152,15 @@
     margin-top: -0.2rem;
 }
 
+.hidden{
+    display: none;
+}
+
 /* media query for screens smaller than 500px */
 @media only screen and (max-width: 500px) {
     .resultList__header__item{
         font-size: 0.9rem;
+        padding: 0 0.6rem;
     }
 
     .amount{

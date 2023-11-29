@@ -17,17 +17,18 @@ If I have time left, I might try to recreate this project with SolidJS as well j
 To start typing, press the `ctrl` + `/` key. This will open the command palette. You can now start typing. The command palette will show you the results of your search.
 
 ### Time spent:
-Total time (so far): 3 hours
+Total time (so far): 3.5 hours
 - 1 hour for the setup of the project and learning th emain differences between Recat en Preact.
 - 0.5 hours for the setup of typescript and creating the needed types in the project (types.d.ts file).
 - 1.5 hours for creating the command palette with styling.
+- 0.5 hours for creating the filtering and styling.
 
 ### TO-DO's:
-- [ ] Create a command palette that opens when pressing `ctrl` + `/`.
+- [x] Create a command palette that opens when pressing `ctrl` + `/`.
 - [x] Make the command palette responsive.
 - [x] Give some more and better styling to the command palette and the results.
 - [ ] Add a small animation for better UX.
-- [ ] Reset the command palette and hide the search bar when the user clicks off the command palette.
+- [x] Reset the command palette and hide the search bar when the user clicks off the command palette.
 - [x] Allow for filtering on the results based on the type of result (people, files, projects).
 
 ### Issues encountered / Difficulties:
