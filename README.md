@@ -23,12 +23,12 @@ Total time (so far): 3 hours
 - 1.5 hours for creating the command palette with styling.
 
 ### TO-DO's:
-- [] Create a command palette that opens when pressing `ctrl` + `/`.
-- [] Make the command palette responsive.
+- [ ] Create a command palette that opens when pressing `ctrl` + `/`.
+- [x] Make the command palette responsive.
 - [x] Give some more and better styling to the command palette and the results.
-- [] Add a small animation for better UX.
-- [] Reset the command palette and hide the search bar when the user clicks off the command palette.
-- [] Allow for filtering on the results based on the type of result (people, files, projects).
+- [ ] Add a small animation for better UX.
+- [ ] Reset the command palette and hide the search bar when the user clicks off the command palette.
+- [x] Allow for filtering on the results based on the type of result (people, files, projects).
 
 ### Issues encountered / Difficulties:
 - I needed a bit of time to get used to the differences between React and Preact. I had to look up some things, but it was not too difficult. They are very similar after all.

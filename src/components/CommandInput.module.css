@@ -14,7 +14,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: min(100%, 500px);
+    width: min(90%, 500px);
     border-radius: 10px;
     margin-top: 20px;
     background-color: #f3f3f3;
@@ -41,4 +41,18 @@
 
 .commandInput::placeholder{
     color: #565656;
+}
+
+@media only screen and (max-width: 500px){
+    .commandInput__container{
+        padding: 0.75rem 1rem;
+    }
+
+    .commandInput__icon{
+        flex-shrink: 0;
+    }
+
+    .commandInput{
+        width: 100%;
+    }
 }
