@@ -4,13 +4,6 @@ import ResultList from './ResultList';
 import { ResultType } from "../types";
 import { useState } from "preact/hooks";
 
-// let data : ResultType[] = [];
-
-// interface ResultListProps {
-//     results: ResultType[];
-// }
-// const search = async (query: string) => (await fetch(`${import.meta.env.VITE_API_URL}/?q=${query}`));
-
 const CommandInput = () => {
     const [data, setData] = useState<ResultType[]>([]);
     const handleSearch = () => (e: Event) => {
@@ -40,7 +33,7 @@ const CommandInput = () => {
                 />
             </div>
 
-            <ResultList results={data} />
+            <ResultList data={data} />
         </div>
     );
 };
