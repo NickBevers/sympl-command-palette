@@ -18,6 +18,7 @@
 
 .app {
     text-align: center;
+    overflow: hidden;
 }
 
 .header{

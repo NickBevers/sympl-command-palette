@@ -8,6 +8,7 @@
 	},
 	"dependencies": {
 		"@preact/compat": "^17.1.2",
+		"animate.css": "^4.1.1",
 		"lucide-preact": "^0.293.0",
 		"preact": "^10.13.1"
 	},

@@ -1,4 +1,5 @@
 import styles from './ResultList.module.css';
+import 'animate.css';
 import { ResultType } from '../types';
 import { User, File, Folder } from 'lucide-preact';
 import { useEffect, useState } from 'preact/hooks';
@@ -46,7 +47,7 @@ const ResultList =  ({ data, visible }: ResultListProps) => {
     }
     
     return (
-        <div class={`${styles.resultList} ${!visible ? styles.hidden :''}`}>
+        <div class={`${styles.resultList} ${!visible ? `animate__fadeOutDown ${styles.hidden}` :'animate__fadeInUp'} animate__animated`}>
             <ul class={styles.resultList__header}>
                 <li class={`${styles.resultList__header__item} ${activeFilter === 'all' ? styles.active : ''}`} onClick={() => {setActiveFilter('all'); setResults(data)}}>All results <span class={styles.amount}>{data.length || 0}</span></li>
                 <li class={`${styles.resultList__header__item} ${activeFilter === 'user' ? styles.active : ''}`} onClick={() => {filterResults('user')}}>Team <span class={styles.amount}>{data.filter((result) => result.type === 'user').length || 0}</span></li> 

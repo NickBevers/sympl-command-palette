@@ -1,4 +1,5 @@
 import styles from "./CommandInput.module.css";
+import 'animate.css';
 import { Search } from "lucide-preact";
 import ResultList from "./ResultList";
 import { ResultType } from "../types";
@@ -28,6 +29,8 @@ const CommandInput = () => {
     const handleKeyDown = (e: KeyboardEvent) => {
         if ((e.metaKey || e.ctrlKey) && (e.key === ":" || e.key === "/")) {
             setSearchVisible(true);
+            // set focus on input
+            document.getElementById("searchInput").focus();
         }
     };
 
@@ -47,19 +50,20 @@ const CommandInput = () => {
 
     return (
         <div class={styles.flexColumn} ref={clickRef}>
-            <div class={`${styles.commandInput__instructions} ${searchVisible ? styles.hidden : ''}`}>Press <pre>ctrl or cmd + /</pre> to start searching.</div>
+            <div class={`${styles.commandInput__instructions} ${searchVisible ? styles.hidden : 'animate__fadeIn'} animate__animated`}>Press <pre>ctrl or cmd + /</pre> to start searching.</div>
 
-            <div class={`${styles.commandInput__container} ${!searchVisible ? styles.hidden : ''}`}>
+            <div class={`${styles.commandInput__container} ${!searchVisible ? styles.hidden : 'animate__fadeIn'} animate__animated`}>
                 <Search class={styles.commandInput__icon} />
                 <input
                     type="text"
+                    id={'searchInput'}
                     class={styles.commandInput}
                     placeholder="Search by keyword"
                     onInput={handleSearch()}
                 />
             </div>
 
-            <ResultList data={data} visible={isVisibile} />
+            <ResultList data={data} visible={isVisibile}/>
         </div>
     );
 };
