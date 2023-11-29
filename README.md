@@ -22,6 +22,7 @@ Total time (so far): 3.5 hours
 - 0.5 hours for the setup of typescript and creating the needed types in the project (types.d.ts file).
 - 1.5 hours for creating the command palette with styling.
 - 0.5 hours for creating the filtering and styling.
+- ± 1 hour for creating the responsive design and showing/hiding the command palette based on user actions.
 
 ### TO-DO's:
 - [x] Create a command palette that opens when pressing `ctrl` + `/`.
